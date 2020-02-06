@@ -8,7 +8,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Instagram',
+      theme: new ThemeData(
+        primaryColor: Colors.black,
+        primaryIconTheme: IconThemeData(color: Colors.black),
+        primaryTextTheme: TextTheme(title: TextStyle(color: Colors.black, fontFamily: "Aveny")),
+        textTheme: TextTheme(title: TextStyle(color: Colors.black))),
       home: FeedPage());
   }
 }
+ 
