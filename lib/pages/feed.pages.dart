@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'insta_body.pages.dart';
+
 class FeedPage extends StatelessWidget {
 
   final topBar = new AppBar(
@@ -22,7 +24,7 @@ class FeedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: topBar,
-      body: new Container(),
+      body: new InstaBody(),
       bottomNavigationBar: new Container(
         color: Colors.white,
         height: 50.0,
@@ -54,6 +56,12 @@ class FeedPage extends StatelessWidget {
                       Icons.favorite,
                     ), 
                     onPressed: null),
+                  new IconButton(
+                    icon: Icon(
+                      Icons.account_box,
+                    ), 
+                    onPressed: null
+                  ),
             ],
           ),
         ),
