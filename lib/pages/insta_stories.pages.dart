@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class InstaStories extends StatelessWidget {
@@ -17,11 +15,52 @@ class InstaStories extends StatelessWidget {
          new Text(
            "Watch All", 
            style: TextStyle(
-             fontWeight: FontWeight.bold),
+             fontWeight: FontWeight.bold)
           ),
        ],
      )
     ],
+  );
+
+  final stories = Expanded(
+    child: Padding(
+      padding: const EdgeInsets.only(top: 8.0),
+      child: new ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 5,
+        itemBuilder: (context, index) => new Stack(
+          alignment: Alignment.bottomRight,
+          children: <Widget>[
+            new Container(
+              width: 60.0,
+              height: 60.0,
+              decoration: new BoxDecoration(
+                shape: BoxShape.circle,
+                image: new DecorationImage(
+                  fit: BoxFit.fill,
+                  image: new NetworkImage(
+                    "https://www.papodecinema.com.br/wp-content/uploads/2017/01/20170112-lego-batman-poster-e1484230275192.jpg"
+                  ),
+                ),
+              ),
+              margin: const EdgeInsets.symmetric(horizontal: 8.0),
+            ),
+            index == 0 ? Positioned(
+              right: 10.0,
+              child: CircleAvatar(
+                backgroundColor: Colors.blueAccent,
+                radius: 10.0,
+                child: new Icon(
+                  Icons.add,
+                  size: 14.0,
+                  color: Colors.white,
+                ),
+              ),
+            ) : new Container()
+          ],
+        ),
+      ),
+    ),
   );
 
   @override
@@ -34,7 +73,7 @@ class InstaStories extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           topText,
-          //stories,
+          stories,
         ],
       ),
     );
