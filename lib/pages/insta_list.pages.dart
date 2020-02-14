@@ -1,5 +1,6 @@
 import 'package:fltr_instagram/pages/insta_stories.pages.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InstaList extends StatelessWidget {
   @override
@@ -12,7 +13,7 @@ class InstaList extends StatelessWidget {
       itemBuilder: (context, index) => index == 0
       ? new SizedBox(
         child: new InstaStories(),
-        height: deviceSize.height * 0.15,
+        height: deviceSize.height * 0.17,
       ):Column(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
@@ -60,6 +61,41 @@ class InstaList extends StatelessWidget {
             child: new Image.network(
               "https://s3.amazonaws.com/images.gearjunkie.com/uploads/2018/05/matterhorn-3x21.jpg",
               fit: BoxFit.cover,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                new Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    new Icon(
+                      FontAwesomeIcons.heart,
+                    ),
+                    new SizedBox(
+                      width: 16.0,
+                    ),
+                    new Icon(
+                      FontAwesomeIcons.comment,
+                    ),
+                    new Icon(
+                      FontAwesomeIcons.paperPlane,
+                    ),
+                  ],
+                ),
+                new Icon(
+                  FontAwesomeIcons.bookmark,
+                ),
+              ],
+            ),
+          ),
+          new Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Text(
+              "Liked by aragorn, pk and 300,589 others",
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
         ],
