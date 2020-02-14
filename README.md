@@ -1,6 +1,6 @@
 # fltr_instagram
 
-A new Flutter project.
+Instagram layout using Flutter.
 
 ## Getting Started
 
