@@ -80,6 +80,9 @@ class InstaList extends StatelessWidget {
                     new Icon(
                       FontAwesomeIcons.comment,
                     ),
+                    new SizedBox(
+                      width: 16.0,
+                    ),
                     new Icon(
                       FontAwesomeIcons.paperPlane,
                     ),
@@ -129,6 +132,11 @@ class InstaList extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: 
+              Text("1 day ago", style: TextStyle(color: Colors.grey)),
           ),
         ],
       ),
