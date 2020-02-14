@@ -98,6 +98,38 @@ class InstaList extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                new Container(
+                  height: 40.0,
+                  width: 40.0,
+                  decoration: new BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: new DecorationImage(
+                      fit: BoxFit.fill,
+                      image: new NetworkImage(
+                        "https://www.papodecinema.com.br/wp-content/uploads/2017/01/20170112-lego-batman-poster-e1484230275192.jpg"
+                      ),
+                    ),
+                  ),
+                ),
+                new SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: new TextField(
+                    decoration: new InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Add a comment...",
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
